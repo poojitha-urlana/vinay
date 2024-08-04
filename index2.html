@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendship Day Greeting</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #B3C6FF, #99C2FF);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            padding: 1rem;
+        }
+
+        .card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: auto;
+            animation: fadeIn 2s ease-in;
+            max-width: 100%;
+            position: relative; /* Ensure the signature is positioned relative to this container */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            animation: fadeIn 2s ease-in;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+
+        button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            background-color: #4A90E2;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #357ABD;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .emoji {
+            font-size: 2rem;
+            margin: 0.5rem;
+        }
+
+        .signature {
+            font-style: italic;
+            color: #555;
+            margin: 0;
+            font-size: 0.5rem; /* Smaller font size */
+            position: absolute;
+            bottom: 1rem; /* Distance from the bottom */
+            right: 1rem; /* Distance from the right */
+        }
+
+        /* Snow effect */
+        .snowflake {
+            position: absolute;
+            top: 0;
+            pointer-events: none;
+            color: #fff;
+            font-size: 1.5rem;
+            user-select: none;
+            animation: snow 10s linear infinite;
+        }
+
+        @keyframes snow {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Heart symbol effect */
+        .heart {
+            color: #E74C3C;
+            font-size: 2rem;
+            margin: 0.5rem;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.7;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .emoji {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="welcome-card" class="card">
+            <h1>Hey Vinay, 🤨</h1>
+            <p>Curious about what I’ve got to say? Click the button to find out!</p>
+            <button id="proceed-button">Open Message</button>
+        </div>
+
+        <div id="wishes-card" class="card hidden">
+            <h1>Happy Friendship Day sadist!❤️</h1>
+            <p>“It’s amazing how we can transform from strangers into friends. Our fights & arguments💥 only make our bond stronger! 😜👌"</p>
+            <p class="emoji">🌟🤪👏</p>
+            <p class="signature">Wishes from PoojiUrlana❤️</p>
+        </div>
+    </div>
+
+    <!-- Snowflakes -->
+    <div class="snowflake" style="left: 10%; animation-duration: 12s; font-size: 1.5rem;">❄</div>
+    <div class="snowflake" style="left: 30%; animation-duration: 15s; font-size: 2rem;">❄</div>
+    <div class="snowflake" style="left: 50%; animation-duration: 18s; font-size: 1.2rem;">❄</div>
+    <div class="snowflake" style="left: 70%; animation-duration: 20s; font-size: 1.8rem;">❄</div>
+    <div class="snowflake" style="left: 90%; animation-duration: 22s; font-size: 1.5rem;">❄</div>
+
+    <script>
+        document.getElementById('proceed-button').addEventListener('click', function() {
+            document.getElementById('welcome-card').classList.add('hidden');
+            document.getElementById('wishes-card').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
